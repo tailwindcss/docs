@@ -22,10 +22,22 @@ export const classes = {
 
 Use the `invert` and `invert-0` utilities alongside the `filter` utility to whether an element should be rendered with inverted colors or normally.
 
-```html
-<div class="filter invert ...">
-  <!-- ... -->
-</div>
+```html lightBlue
+<template preview>
+  <div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-light-blue-400 rounded-md filter invert-0"></div>
+      <p class="relative font-extrabold text-white">invert-0</p>
+    </div>
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-light-blue-400 rounded-md filter invert"></div>
+      <p class="relative font-extrabold text-white">invert</p>
+    </div>
+  </div>
+</template>
+
+<div class="filter **invert-0** ..."></div>
+<div class="filter **invert** ..."></div>
 ```
 
 ## Responsive

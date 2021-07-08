@@ -27,10 +27,37 @@ export const classes = {
 
 Use the `contrast-{amount?}` utilities alongside the `filter` utility to control an element's contrast.
 
-```html
-<div class="filter contrast-125 ...">
-  <!-- ... -->
-</div>
+```html amber
+<template preview>
+  <div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-amber-400 rounded-md filter contrast-0"></div>
+      <p class="relative font-extrabold text-white">0</p>
+    </div>
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-amber-400 rounded-md filter contrast-50"></div>
+      <p class="relative font-extrabold text-white">50</p>
+    </div>
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-amber-400 rounded-md filter contrast-100"></div>
+      <p class="relative font-extrabold text-amber-800">100</p>
+    </div>
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-amber-400 rounded-md filter contrast-150"></div>
+      <p class="relative font-extrabold text-amber-800">150</p>
+    </div>
+    <div class="relative h-16 flex items-center justify-center">
+      <div aria-hidden="true" class="absolute inset-0 bg-amber-400 rounded-md filter contrast-200"></div>
+      <p class="relative font-extrabold text-amber-800">200</p>
+    </div>
+  </div>
+</template>
+
+<div class="filter **contrast-0** ..."></div>
+<div class="filter **contrast-50** ..."></div>
+<div class="filter **contrast-100** ..."></div>
+<div class="filter **contrast-150** ..."></div>
+<div class="filter **contrast-200** ..."></div>
 ```
 
 ## Responsive
